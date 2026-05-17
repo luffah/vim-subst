@@ -1,0 +1,8 @@
+:S	subst.txt	/:S 
+:SQ	subst.txt	/:SQ 
+subst	subst.txt	/*subst*
+subst#()	subst.txt	/*subst#()*
+subst#exchange()	subst.txt	/*subst#exchange()*
+subst-contents	subst.txt	/*subst-contents*
+subst-functions	subst.txt	/*subst-functions*
+subst.vim	subst.txt	/*subst.vim*

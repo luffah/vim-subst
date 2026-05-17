@@ -1,0 +1,44 @@
+*subst.vim*    substitute and search with more lazyness
+                                                                       *subst*
+License:     AGPL (see http://www.gnu.org/licenses/agpl)
+Author(s):   luffah (luffah AT runbox com)
+Revision:    1
+Last Change: 2026-05-21
+
+Features:
+  * substitution with options at the end :
+       * options g,n,c,I,#,p,n,e,i,& have same meaning that in s///opt
+       * option % and 2,4 will work as range
+       * option h to add in history
+       * option v to revert src & dest
+       * option f or ~ for a fuzzy substitution
+       * option x to exchange values instead of substitute
+         Note : with x option, regexp are not supported
+  * command arguments are completed in wildmode (include tags)
+
+Usage:
+  " Commande help
+  :S -h
+  " Search
+  :S pattern
+  " Substitute
+  :S pattern replacement options
+  " Search  (SQ is for Quoted Search/Subst, simple and double quote are useable)
+  :SQ 'pattern'
+  " Substitute
+  :SQ 'pattern','replacement','options'
+==============================================================================
+CONTENTS                                                      *subst-contents*
+
+1. Functions                                                 |subst-functions|
+
+==============================================================================
+FUNCTIONS                                                    *subst-functions*
+
+subst#(from, [to, [flag]])                                         *subst#()*
+    like s/from/to/flag with additionnal options. See :S -h
+
+subst#exchange(line, word1, word2, flag)                   *subst#exchange()*
+    returns line with exchanged words.
+
+vim:tw=78:ts=8:ft=help:norl:
